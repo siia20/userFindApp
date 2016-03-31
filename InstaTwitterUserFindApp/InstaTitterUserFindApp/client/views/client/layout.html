@@ -1,0 +1,20 @@
+<template name="layout">
+    <!--<nav>-->
+        <!--left side bar-->
+        <div class="nav-wrapper">
+
+            <div id="slide-out" class="side-nav" style="padding: 15px; float:left;">
+                <p class="sidebar-text">same</p>
+                <p class="sidebar-text">but diffenent</p>
+                
+                <!--user search text field-->
+                <div class="input-field">
+                    <input id="user" placeholder="Search User" type="text" class="validate">
+                    <i class="material-icons" id="btnSearch">search</i>
+                </div>
+            </div>
+            <!--other template will be render here-->
+            {{> yield}}
+        </div>
+
+</template>

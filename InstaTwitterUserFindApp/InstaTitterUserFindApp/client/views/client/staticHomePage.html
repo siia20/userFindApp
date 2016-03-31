@@ -1,0 +1,52 @@
+<template name="staticHomePage">
+
+    <div id="mainLoader" class="preloader-wrapper" style="left:48%;position:absolute; top: 30%;  z-index: 9999;">
+        <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+   
+<div class="row" style="width: 1365px;overflow: visible;overflow-x: scroll;padding-left:17.5%;">
+   
+    {{#if allUsers.length}}
+    {{#each allUsers}}
+        <div id="userList" class="col s2 userList userList{{index}}" style="margin-bottom: 20px; width:225px;">
+          <div class="card small" style="height: initial;">
+               <div class="card-content">
+              <span class="userName">{{full_name}}</span>
+            </div>
+            <div class="card-image">
+              <img src="{{profile_picture}}" style="height: 203px;">
+            </div>
+            
+            <div id="{{id}}">
+                <div id="showMoreResults" style="margin-left: 40%;">
+                   <img src="/img/bars.svg" width="40" alt="">
+                </div>
+            </div>
+          </div>
+        </div>
+       
+        {{/each}}
+         {{flikerProfile}}
+        {{else}}
+        <div class="default-states" style="height:287px;">
+        <h2> Search Instagram/Twitter User
+        </h2>
+        </div>
+        {{/if}}
+      </div>
+
+</template>
+
+<template name="loginSuccess">
+    test
+</template>
